@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1274" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1273">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="1274" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1277">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="2271" destination="2142" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1278" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="685"/>
+        </scene>
+        <scene sceneID="1279">
+            <objects>
+                <viewController id="1276" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1271"/>
+                        <viewControllerLayoutGuide type="bottom" id="1272"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1281">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.18823529411764706" green="0.33725490196078434" blue="0.64313725490196083" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="1818" translatesAutoresizingMaskIntoConstraints="NO" image="facebook-icon.jpg">
+                                <rect key="frame" x="20" y="40" width="560" height="150"/>
+                                <constraints>
+                                    <constraint id="1828" firstItem="1818" firstAttribute="height" constant="150"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1835" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Email/ Phone number">
+                                <rect key="frame" x="20" y="223" width="560" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="1839" firstItem="1835" firstAttribute="height" constant="50"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1840" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Password" clearButtonMode="always">
+                                <rect key="frame" x="20" y="290" width="560" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="1841" firstItem="1840" firstAttribute="height" constant="50"/>
+                                </constraints>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1853" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="365" width="553" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="1857" firstItem="1853" firstAttribute="height" constant="30"/>
+                                </constraints>
+                                <connections>
+                                    <segue id="2130" destination="2042" kind="show"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1281" firstAttribute="trailing" secondItem="1818" secondAttribute="trailing" constant="20" id="1819"/>
+                            <constraint firstItem="1818" firstAttribute="top" secondItem="1271" secondAttribute="bottom" constant="20" id="1826"/>
+                            <constraint firstItem="1818" firstAttribute="leading" secondItem="1281" secondAttribute="leading" constant="20" id="1827"/>
+                            <constraint firstItem="1281" firstAttribute="trailing" secondItem="1835" secondAttribute="trailing" constant="20" id="1836"/>
+                            <constraint firstItem="1835" firstAttribute="top" secondItem="1818" secondAttribute="bottom" constant="33" id="1837"/>
+                            <constraint firstItem="1835" firstAttribute="leading" secondItem="1281" secondAttribute="leading" constant="20" id="1838"/>
+                            <constraint firstItem="1840" firstAttribute="top" secondItem="1835" secondAttribute="bottom" constant="17" id="1842"/>
+                            <constraint firstItem="1281" firstAttribute="trailing" secondItem="1840" secondAttribute="trailing" constant="20" id="1843"/>
+                            <constraint firstItem="1840" firstAttribute="leading" secondItem="1281" secondAttribute="leading" constant="20" id="1844"/>
+                            <constraint firstItem="1853" firstAttribute="leading" secondItem="1281" secondAttribute="leading" constant="20" id="1854"/>
+                            <constraint firstItem="1853" firstAttribute="top" secondItem="1840" secondAttribute="bottom" constant="25" id="1855"/>
+                            <constraint firstItem="1281" firstAttribute="trailing" secondItem="1853" secondAttribute="trailing" constant="27" id="1856"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="1280"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1282" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="-2"/>
+        </scene>
+        <scene sceneID="2041">
+            <objects>
+                <viewController id="2042" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2039"/>
+                        <viewControllerLayoutGuide type="bottom" id="2040"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2043">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2132" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="36" y="72" width="544" height="240"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <constraints>
+                                    <constraint id="2136" firstItem="2132" firstAttribute="height" constant="240"/>
+                                </constraints>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2132" firstAttribute="top" secondItem="2039" secondAttribute="bottom" constant="52" id="2133"/>
+                            <constraint firstItem="2132" firstAttribute="leading" secondItem="2043" secondAttribute="leading" constant="36" id="2134"/>
+                            <constraint firstItem="2043" firstAttribute="trailing" secondItem="2132" secondAttribute="trailing" constant="20" id="2135"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2044" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-6"/>
+        </scene>
+        <scene sceneID="2141">
+            <objects>
+                <viewController id="2142" sceneMemberID="viewController" customClass="SocialOptions">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2139"/>
+                        <viewControllerLayoutGuide type="bottom" id="2140"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2143">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2181" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2386" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="19" y="108" width="561" height="90"/>
+                                <state key="normal" backgroundImage="facebook-icon.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="2390" firstItem="2386" firstAttribute="height" constant="90"/>
+                                </constraints>
+                                <connections>
+                                    <segue id="2461" destination="1276" kind="show"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2480" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="19" y="242" width="561" height="90"/>
+                                <state key="normal" backgroundImage="twitterlogo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="2481" firstItem="2480" firstAttribute="height" constant="90"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2489" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="19" y="376" width="561" height="90"/>
+                                <state key="normal" backgroundImage="instagramlogo.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="2490" firstItem="2489" firstAttribute="height" constant="90"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2143" firstAttribute="trailing" secondItem="2386" secondAttribute="trailing" constant="20" id="2387"/>
+                            <constraint firstItem="2386" firstAttribute="top" secondItem="2139" secondAttribute="bottom" constant="44" id="2388"/>
+                            <constraint firstItem="2386" firstAttribute="leading" secondItem="2143" secondAttribute="leading" constant="19" id="2389"/>
+                            <constraint firstItem="2143" firstAttribute="trailing" secondItem="2480" secondAttribute="trailing" constant="20" id="2482"/>
+                            <constraint firstItem="2480" firstAttribute="leading" secondItem="2143" secondAttribute="leading" constant="19" id="2483"/>
+                            <constraint firstItem="2480" firstAttribute="top" secondItem="2386" secondAttribute="bottom" constant="44" id="2484"/>
+                            <constraint firstItem="2143" firstAttribute="trailing" secondItem="2489" secondAttribute="trailing" constant="20" id="2491"/>
+                            <constraint firstItem="2489" firstAttribute="leading" secondItem="2143" secondAttribute="leading" constant="19" id="2493"/>
+                            <constraint firstItem="2489" firstAttribute="top" secondItem="2480" secondAttribute="bottom" constant="44" id="2495"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SocialOptions" destination="2143" id="name-outlet-2143"/>
+                    </connections>
+                    <navigationItem title="Social Options" id="2270" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2144" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="672"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook-icon.jpg" width="2100" height="561"/>
+        <image name="instagramlogo.jpg" width="432" height="117"/>
+        <image name="twitterlogo.png" width="2100" height="790"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
