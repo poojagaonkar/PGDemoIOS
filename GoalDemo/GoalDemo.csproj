@@ -96,6 +96,10 @@
     </Compile>
     <Compile Include="Model\TimelineModel.cs" />
     <Compile Include="RootTableSource.cs" />
+    <Compile Include="TimelineCustomCel.cs" />
+    <Compile Include="TimelineCustomCel.designer.cs">
+      <DependentUpon>TimelineCustomCel.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

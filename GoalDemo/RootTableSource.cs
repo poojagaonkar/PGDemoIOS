@@ -16,10 +16,9 @@ namespace GoalDemo
 		#region implemented abstract members of UITableViewSource
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
-			var cell = tableView.DequeueReusableCell ("timelineCell");
-			cell.TextLabel.Text = mData [indexPath.Row].UserName;
-			cell.ImageView.Image =  UIImage.FromFile ("Images/"+mData[indexPath.Row].ImageName);
-			//cell.DetailTextLabel.Text = mData [indexPath.Row].Detail;
+			var cell = tableView.DequeueReusableCell ("timelineCell") as TimelineCustomCel;
+			cell.UpdateCell(mData [indexPath.Row].UserName, UIImage.FromFile (mData[indexPath.Row].ImageName),mData [indexPath.Row].Detail );
+		
 
 			return cell;
 
@@ -32,6 +31,10 @@ namespace GoalDemo
 
 		public TimelineModel GetItem(nint id){
 			return mData [id];
+		}
+		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
+		{
+			return 182;
 		}
 	}
 
