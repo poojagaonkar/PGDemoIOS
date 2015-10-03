@@ -11,18 +11,18 @@ using UIKit;
 
 namespace GoalDemo
 {
-	[Register ("SocialOptions")]
-	partial class SocialOptions
+	[Register ("TimelineController")]
+	partial class TimelineController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIView _SocialOptions { get; set; }
+		UITableView TimelineView { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (_SocialOptions != null) {
-				_SocialOptions.Dispose ();
-				_SocialOptions = null;
+			if (TimelineView != null) {
+				TimelineView.Dispose ();
+				TimelineView = null;
 			}
 		}
 	}

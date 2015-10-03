@@ -90,11 +90,23 @@
     <Compile Include="SocialOptions.designer.cs">
       <DependentUpon>SocialOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimelineController.cs" />
+    <Compile Include="TimelineController.designer.cs">
+      <DependentUpon>TimelineController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TimelineModel.cs" />
+    <Compile Include="RootTableSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\facebook-icon.jpg" />
     <BundleResource Include="Resources\instagramlogo.jpg" />
     <BundleResource Include="Resources\twitterlogo.png" />
+    <BundleResource Include="Resources\Unknown.jpg" />
+    <BundleResource Include="Resources\coment.png" />
+    <BundleResource Include="Resources\like.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
 </Project>
