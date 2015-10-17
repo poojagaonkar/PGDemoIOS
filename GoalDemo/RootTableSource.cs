@@ -17,7 +17,7 @@ namespace GoalDemo
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
 			var cell = tableView.DequeueReusableCell ("timelineCell") as TimelineCustomCel;
-			cell.UpdateCell(mData [indexPath.Row].UserName, UIImage.FromFile (mData[indexPath.Row].ImageName),mData [indexPath.Row].Detail );
+			cell.UpdateCell(mData [indexPath.Row].UserName, UIImage.FromFile (mData[indexPath.Row].ImageName),mData [indexPath.Row].Detail,mData [indexPath.Row].NumLikes, mData [indexPath.Row].NumComments,mData [indexPath.Row].PostDate );
 		
 
 			return cell;

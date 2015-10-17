@@ -32,6 +32,10 @@ namespace GoalDemo
 			get;
 			set;
 		}
+		public DateTime PostDate {
+			get;
+			set;
+		}
 	}
 }
 

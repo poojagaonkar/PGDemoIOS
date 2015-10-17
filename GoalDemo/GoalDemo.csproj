@@ -109,6 +109,10 @@
     <BundleResource Include="Resources\Unknown.jpg" />
     <BundleResource Include="Resources\coment.png" />
     <BundleResource Include="Resources\like.jpg" />
+    <BundleResource Include="Resources\user2.png" />
+    <BundleResource Include="Resources\user1.png" />
+    <BundleResource Include="Resources\user4.png" />
+    <BundleResource Include="Resources\user3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

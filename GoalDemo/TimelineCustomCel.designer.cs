@@ -26,6 +26,18 @@ namespace GoalDemo
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel labelUsername { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblComments { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblDate { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblLikes { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (detailLabel != null) {
@@ -39,6 +51,18 @@ namespace GoalDemo
 			if (labelUsername != null) {
 				labelUsername.Dispose ();
 				labelUsername = null;
+			}
+			if (lblComments != null) {
+				lblComments.Dispose ();
+				lblComments = null;
+			}
+			if (lblDate != null) {
+				lblDate.Dispose ();
+				lblDate = null;
+			}
+			if (lblLikes != null) {
+				lblLikes.Dispose ();
+				lblLikes = null;
 			}
 		}
 	}

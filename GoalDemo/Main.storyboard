@@ -158,55 +158,112 @@
         <scene sceneID="2791">
             <objects>
                 <tableViewController id="2792" sceneMemberID="viewController" customClass="TimelineController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2793">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2793">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2796" reuseIdentifier="timelineCell" rowHeight="182" customClass="TimelineCustomCel">
-                                <rect key="frame" x="0.0" y="22" width="600" height="182"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2796" reuseIdentifier="timelineCell" rowHeight="170" customClass="TimelineCustomCel" horizontalContentHuggingPriority="204">
+                                <rect key="frame" x="0.0" y="22" width="600" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2796" id="2797">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="181.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2842" translatesAutoresizingMaskIntoConstraints="NO" image="Unknown.jpg">
-                                            <rect key="frame" x="20" y="20" width="73" height="68"/>
+                                            <rect key="frame" x="20" y="20" width="40" height="40"/>
                                             <constraints>
-                                                <constraint id="2854" firstAttribute="width" constant="73"/>
-                                                <constraint id="2855" firstAttribute="height" constant="68"/>
+                                                <constraint id="2854" firstAttribute="width" constant="40"/>
+                                                <constraint id="2855" firstAttribute="height" constant="40"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="2845" translatesAutoresizingMaskIntoConstraints="NO">
-                                            <rect key="frame" x="119" y="44" width="448" height="20.5"/>
+                                            <rect key="frame" x="70" y="20" width="497" height="22"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="3029" translatesAutoresizingMaskIntoConstraints="NO" tag="1">
-                                            <rect key="frame" x="20" y="113" width="553" height="20.5"/>
+                                            <rect key="frame" x="20" y="70" width="553" height="20.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="3068" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="20" y="141.5" width="0.0" height="0.0"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="3071" translatesAutoresizingMaskIntoConstraints="NO" image="like.jpg">
+                                            <rect key="frame" x="20" y="134.5" width="28" height="28"/>
+                                            <constraints>
+                                                <constraint id="3074" firstItem="3071" firstAttribute="height" constant="28"/>
+                                                <constraint id="3075" firstItem="3071" firstAttribute="width" constant="28"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="3076" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="68" y="139" width="42" height="20.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.14509803921568629" green="0.25490196078431371" blue="0.57647058823529407" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="3131" translatesAutoresizingMaskIntoConstraints="NO" image="coment.png">
+                                            <rect key="frame" x="130" y="138.5" width="24" height="23"/>
+                                            <constraints>
+                                                <constraint id="3133" firstItem="3131" firstAttribute="height" constant="23"/>
+                                                <constraint id="3134" firstItem="3131" firstAttribute="width" constant="24"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="3135" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="176" y="140" width="379" height="20.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.14509803921568629" green="0.25490196078431371" blue="0.57647058823529407" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="3166" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="68" y="41" width="505" height="14.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2797" firstAttribute="trailing" secondItem="2845" secondAttribute="trailing" constant="33" id="2846"/>
-                                        <constraint firstItem="2845" firstAttribute="top" secondItem="2797" secondAttribute="top" constant="44" id="2847"/>
+                                        <constraint firstItem="2845" firstAttribute="top" secondItem="2797" secondAttribute="top" constant="20" id="2847"/>
                                         <constraint id="2856" constant="20" firstItem="2842" firstAttribute="leading" secondItem="2797" secondAttribute="leading"/>
                                         <constraint id="2857" constant="20" firstItem="2842" firstAttribute="top" secondItem="2797" secondAttribute="top"/>
-                                        <constraint firstItem="2845" firstAttribute="leading" secondItem="2842" secondAttribute="trailing" constant="26" id="2858"/>
-                                        <constraint firstItem="3029" firstAttribute="top" secondItem="2842" secondAttribute="bottom" constant="25" id="3030"/>
+                                        <constraint firstItem="2845" firstAttribute="leading" secondItem="2842" secondAttribute="trailing" constant="10" id="2858"/>
+                                        <constraint firstItem="3029" firstAttribute="top" secondItem="2842" secondAttribute="bottom" constant="10" id="3030"/>
                                         <constraint firstItem="3029" firstAttribute="leading" secondItem="2797" secondAttribute="leading" constant="20" id="3031"/>
                                         <constraint firstItem="2797" firstAttribute="trailing" secondItem="3029" secondAttribute="trailing" constant="27" id="3032"/>
+                                        <constraint firstItem="2797" firstAttribute="bottom" secondItem="3068" secondAttribute="bottom" constant="8" id="3069"/>
+                                        <constraint firstItem="3068" firstAttribute="leading" secondItem="2797" secondAttribute="leading" constant="20" id="3070"/>
+                                        <constraint firstItem="2797" firstAttribute="bottom" secondItem="3071" secondAttribute="bottom" constant="7" id="3072"/>
+                                        <constraint firstItem="3071" firstAttribute="leading" secondItem="2797" secondAttribute="leading" constant="20" id="3073"/>
+                                        <constraint firstItem="3076" firstAttribute="leading" secondItem="3071" secondAttribute="trailing" constant="20" id="3077"/>
+                                        <constraint firstItem="2797" firstAttribute="bottom" secondItem="3076" secondAttribute="bottom" constant="10" id="3078"/>
+                                        <constraint firstItem="2797" firstAttribute="bottom" secondItem="3131" secondAttribute="bottom" constant="8" id="3132"/>
+                                        <constraint firstItem="3135" firstAttribute="leading" secondItem="3131" secondAttribute="trailing" constant="22" id="3136"/>
+                                        <constraint firstItem="2797" firstAttribute="trailing" secondItem="3135" secondAttribute="trailing" constant="45" id="3137"/>
+                                        <constraint firstItem="2797" firstAttribute="bottom" secondItem="3135" secondAttribute="bottom" constant="9" id="3138"/>
+                                        <constraint firstItem="3131" firstAttribute="leading" secondItem="3076" secondAttribute="trailing" constant="20" id="3163"/>
+                                        <constraint firstItem="2845" firstAttribute="bottom" secondItem="3166" secondAttribute="top" constant="1" id="3167"/>
+                                        <constraint firstItem="3166" firstAttribute="top" secondItem="2845" secondAttribute="centerY" constant="10" id="3168"/>
+                                        <constraint firstItem="3166" firstAttribute="leading" secondItem="2842" secondAttribute="trailing" constant="8" id="3169"/>
+                                        <constraint firstItem="2797" firstAttribute="trailing" secondItem="3166" secondAttribute="trailing" constant="27" id="3170"/>
+                                        <constraint firstItem="2845" firstAttribute="leading" secondItem="2842" secondAttribute="trailing" constant="10" id="3171"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imgProfilePic" destination="2842" id="name-outlet-2842"/>
                                     <outlet property="labelUsername" destination="2845" id="name-outlet-2845"/>
                                     <outlet property="detailLabel" destination="3029" id="name-outlet-3029"/>
+                                    <outlet property="lblLikes" destination="3076" id="name-outlet-3076"/>
+                                    <outlet property="lblComments" destination="3135" id="name-outlet-3135"/>
+                                    <outlet property="lblDate" destination="3166" id="name-outlet-3166"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -214,6 +271,7 @@
                             <outlet property="dataSource" destination="2792" id="2794"/>
                             <outlet property="delegate" destination="2792" id="2795"/>
                         </connections>
+                        <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1"/>
                     </tableView>
                     <connections>
                         <outlet property="TimelineView" destination="2793" id="name-outlet-2793"/>
@@ -231,5 +289,13 @@
         <image name="Unknown.jpg" width="225" height="225"/>
         <image name="coment.png" width="204" height="204"/>
         <image name="like.jpg" width="225" height="225"/>
+        <image name="user5.jpg" width="204" height="204"/>
+        <image name="user4.jpg" width="201" height="251"/>
+        <image name="user3.jpg" width="128" height="128"/>
+        <image name="user2.png" width="300" height="300"/>
+        <image name="user1.png" width="400" height="400"/>
+        <image name="user3.png" width="512" height="512"/>
+        <image name="user4.png" width="184" height="274"/>
+        <image name="user5.png" width="225" height="225"/>
     </resources>
 </document>
