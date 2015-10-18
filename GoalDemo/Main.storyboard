@@ -123,6 +123,9 @@
                                 <constraints>
                                     <constraint id="2481" firstItem="2480" firstAttribute="height" constant="90"/>
                                 </constraints>
+                                <connections>
+                                    <segue id="3346" destination="3195" kind="show"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2489" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="19" y="376" width="561" height="90"/>
@@ -280,6 +283,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2798" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="822" y="-11"/>
+        </scene>
+        <scene sceneID="3194">
+            <objects>
+                <viewController id="3195" sceneMemberID="viewController" customClass="TwitterController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3192"/>
+                        <viewControllerLayoutGuide type="bottom" id="3193"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3196">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="TwitterView" destination="3196" id="name-outlet-3196"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3197" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="657"/>
         </scene>
     </scenes>
     <resources>
