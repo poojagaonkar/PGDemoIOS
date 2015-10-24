@@ -131,6 +131,10 @@
     <Compile Include="TwitterController.designer.cs">
       <DependentUpon>TwitterController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TwitterTimelineTabController.cs" />
+    <Compile Include="TwitterTimelineTabController.designer.cs">
+      <DependentUpon>TwitterTimelineTabController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -144,6 +148,10 @@
     <BundleResource Include="Resources\user1.png" />
     <BundleResource Include="Resources\user4.png" />
     <BundleResource Include="Resources\user3.png" />
+    <BundleResource Include="Resources\twitat.png" />
+    <BundleResource Include="Resources\twithash.png" />
+    <BundleResource Include="Resources\twithome.png" />
+    <BundleResource Include="Resources\twituser.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

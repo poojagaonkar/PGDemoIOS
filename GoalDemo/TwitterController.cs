@@ -35,13 +35,16 @@ namespace GoalDemo
 					
 					loggedInAccount = e.Account;
 					GetUserData ();
-					//GetTwitterData();
+					var mList = GetTwitterData().ToString();
+					PresentViewController(new TwitterTimelineTabController(mList), true, null);
 				}
 
 			};
 
 			var ui = auth.GetUI();
 			PresentViewController(ui, true, null);
+
+
 
 		}
 
@@ -54,11 +57,11 @@ namespace GoalDemo
 			IEnumerable<Xamarin.Auth.Account> accounts = AccountStore.Create().FindAccountsForService("Twitter");
 
 			//check the account store for a valid account marked as "Twitter" and then hold on to it for future requests
-			foreach (Xamarin.Auth.Account account in accounts)
+			/*foreach (Xamarin.Auth.Account account in accounts)
 			{
 				loggedInAccount = account;
 				break;
-			}
+			}*/
 			var cred = new LinqToTwitter.InMemoryCredentialStore();
 			cred.ConsumerKey = loggedInAccount.Properties["oauth_consumer_key"];
 			cred.ConsumerSecret = loggedInAccount.Properties["oauth_consumer_secret"];
