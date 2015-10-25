@@ -13,10 +13,11 @@ namespace GoalDemo
 {
 	partial class TwitterController : UIViewController
 	{
+		
 		private Xamarin.Auth.Account loggedInAccount;
 		public TwitterController (IntPtr handle) : base (handle)
 		{
-				
+
 		}
 		public override  void ViewDidLoad ()
 		{
@@ -32,7 +33,7 @@ namespace GoalDemo
 			auth.Completed += (sender, e) => {
 				DismissViewController (true, null);
 				if (e.IsAuthenticated) {
-					
+
 					loggedInAccount = e.Account;
 					GetUserData ();
 					var mList = GetTwitterData().ToString();
@@ -48,7 +49,7 @@ namespace GoalDemo
 
 		}
 
-		
+
 
 
 		async public Task<List<LinqToTwitter.Status>> GetTwitterData()
@@ -102,6 +103,8 @@ namespace GoalDemo
 
 			});
 		}
-			
+
 	}
+			
+
 }
