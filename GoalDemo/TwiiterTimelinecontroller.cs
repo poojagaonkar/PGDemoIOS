@@ -2,28 +2,27 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
+using LinqToTwitter;
+using System.Collections.Generic;
 using Xamarin.Auth;
 using System.Linq;
-using System.Collections.Generic;
-using LinqToTwitter;
 using System.Threading.Tasks;
-using CoreGraphics;
-
 
 namespace GoalDemo
 {
-	partial class TwitterHomwController : UIViewController
+	partial class TwiiterTimelinecontroller : UITableViewController
 	{
 		private Xamarin.Auth.Account loggedInAccount;
 		private List<Status> myList;
-		public TwitterHomwController (IntPtr handle) : base (handle)
+		public TwiiterTimelinecontroller (IntPtr handle) : base (handle)
 		{
+			myList = new List<Status>();
+			myList.Add(new Status());
+			myList[0] = new List<LinqToTwitter.Status>().ToArray();
 		}
-
-		public override  void ViewDidLoad ()
+		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-
 			var auth = new OAuth1Authenticator ("Ywun66NxYNMXgjzNRdIG12q4k",
 				"XQAQ5djSlMOiXfMhn5rl4fdPahqw0wNPW6nBS5I9aRCajbxMvJ",
 				new Uri("https://api.twitter.com/oauth/request_token"),
@@ -38,19 +37,10 @@ namespace GoalDemo
 					loggedInAccount = e.Account;
 					GetUserData ();
 					var mList =   GetTwitterData();
-				
-					twitterHomeTableView.Source = new TwitterHomeSource(mList.ToArray());
-				
-					/*mList.ContinueWith((Task<List<Status>> arg) => {
-
+					mList.ContinueWith(async (Task<List<Status>> arg) =>{
 						myList = arg.Result;
-
+						//twitterHomeTableView.Source = new TwitterHomeSource(arg.Result.ToArray());
 					});
-					if(mList.IsCompleted){
-						twitterHomeTableView.Source = new TwitterHomeSource(myList.ToArray());
-					}*/
-
-				
 
 
 				}
@@ -59,11 +49,8 @@ namespace GoalDemo
 
 			var ui = auth.GetUI();
 			PresentViewController(ui, true, null);
-
-
-
 		}
-		 public  List<LinqToTwitter.Status> GetTwitterData()
+		async public  Task<List<LinqToTwitter.Status>> GetTwitterData()
 		{
 			//has the user already authenticated from a previous session? see AccountStore.Create().Save() later
 			IEnumerable<Xamarin.Auth.Account> accounts = AccountStore.Create().FindAccountsForService("Twitter");
@@ -85,10 +72,10 @@ namespace GoalDemo
 			};
 			var TwitterCtx = new LinqToTwitter.TwitterContext(auth);
 			Console.WriteLine(TwitterCtx.User);
-			List<LinqToTwitter.Status> tl = 
+			List<LinqToTwitter.Status> tl = await
 				(from tweet in TwitterCtx.Status
 					where tweet.Type == LinqToTwitter.StatusType.Home
-					select tweet).ToList();
+					select tweet).ToListAsync();
 
 			return tl;
 			//Console.WriteLine("Tweets Returned: " + tl.Count.ToString());
@@ -114,5 +101,63 @@ namespace GoalDemo
 
 			});
 		}
+
+		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+		{
+			var cell = MainTwitterTimelne.DequeueReusableCell("twitcell");
+			if (cell == null)
+			{
+				cell = new UITableViewCell(UITableViewCellStyle.Subtitle, "twitcell");
+			}
+			if ((myList.Count != 0) && (myList.Count > 0))
+			{
+				var task = System.Threading.Tasks.Task.Factory.StartNew(() =>
+					{
+						InvokeOnMainThread(delegate
+							{
+								tableView.BeginUpdates();
+								cell.ImageView.Image =
+									LoadImage(myList.ToArray()[indexPath.Row].User.ProfileImageUrl);
+								tableView.EndUpdates();
+							});
+					});
+				cell.TextLabel.Text = myList.ToArray()[indexPath.Row].Text;
+				cell.DetailTextLabel.Text =myList.ToArray()[indexPath.Row].User.ScreenNameResponse;
+			}
+			return cell;
+		}
+
+		public UIImage LoadImage(string imageUrl)
+		{
+			UIImage img = new UIImage();
+			try
+			{
+				var nsu = new NSUrl(imageUrl);
+				var nsd = NSData.FromUrl(nsu);
+				img = UIImage.LoadFromData(nsd);
+			}
+			catch (System.Exception exc)
+			{
+				Console.WriteLine(exc.Message);
+			}
+			return img;
+		}
+		public override nint NumberOfSections (UITableView tableView)
+		{
+			return 1;
+		}
+		public override nint RowsInSection (UITableView tableview, nint section)
+		{
+			return myList.Count;
+		}
+		/*public override int NumberOfSections(UITableView tableView)
+		{
+			return 1;
+		}
+		public override int RowsInSection(UITableView tableview, int section)
+		{
+			var i = 0;
+			return myList.ToArray().Length;
+		}*/
 	}
 }

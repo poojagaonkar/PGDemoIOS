@@ -151,6 +151,7 @@
     <Compile Include="TwitterConnectController.designer.cs">
       <DependentUpon>TwitterConnectController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IDataHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -177,6 +178,7 @@
     <Folder Include="TableSources\" />
     <Folder Include="CustomCells\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">

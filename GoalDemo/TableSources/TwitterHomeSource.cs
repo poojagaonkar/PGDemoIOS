@@ -24,7 +24,7 @@ namespace GoalDemo
 
 		public override nint RowsInSection (UITableView tableview, nint section)
 		{
-			return 0;
+			return mFeedList.Length;
 		}
 
 		#endregion
