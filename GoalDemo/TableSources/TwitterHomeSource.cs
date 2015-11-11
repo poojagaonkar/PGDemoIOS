@@ -7,6 +7,7 @@ namespace GoalDemo
 	public class TwitterHomeSource : UITableViewSource
 	{
 		private LinqToTwitter.Status[] mFeedList;
+		private TwitterHomeCell cell;
 		public TwitterHomeSource (LinqToTwitter.Status[] feedList)
 		{
 			this.mFeedList = feedList;
@@ -16,9 +17,11 @@ namespace GoalDemo
 
 		public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-			var cell = tableView.DequeueReusableCell ("twitterHomeCell") as TwitterHomeCell;
-			var item = mFeedList [indexPath.Row];
-			cell.UpdateCell (item.User.Name, item.User.ProfileImageUrl, item.Text, item.User.ScreenNameResponse, item.CreatedAt.ToShortDateString() );
+			if (cell == null) {
+				cell = tableView.DequeueReusableCell ("twitterHomeCell") as TwitterHomeCell;
+				var item = mFeedList [indexPath.Row];
+				cell.UpdateCell (item.User.Name, item.User.ProfileImageUrl, item.Text, item.User.ScreenNameResponse, item.CreatedAt.ToShortDateString ());
+			}
 			return cell;
 		}
 

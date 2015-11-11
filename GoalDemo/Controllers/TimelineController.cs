@@ -26,6 +26,7 @@ namespace GoalDemo
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			TableView.Source = new RootTableSource(_timelineData.ToArray());
 		}
 		public override void ViewDidAppear (bool animated)
 		{
@@ -36,7 +37,7 @@ namespace GoalDemo
 		{
 			base.ViewWillAppear (animated);
 
-			TableView.Source = new RootTableSource(_timelineData.ToArray());
+
 		}
 	}
 }

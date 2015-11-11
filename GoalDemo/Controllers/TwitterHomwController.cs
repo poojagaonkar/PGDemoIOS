@@ -38,8 +38,12 @@ namespace GoalDemo
 					loggedInAccount = e.Account;
 					GetUserData ();
 					var mList =   GetTwitterData();
-				
+
+					twitterHomeTableView.RowHeight = UITableView.AutomaticDimension;
+					//twitterHomeTableView.EstimatedRowHeight = 150;
+
 					twitterHomeTableView.Source = new TwitterHomeSource(mList.ToArray());
+					twitterHomeTableView.ReloadData();
 				
 					/*mList.ContinueWith((Task<List<Status>> arg) => {
 
@@ -113,6 +117,10 @@ namespace GoalDemo
 
 
 			});
+		}
+		public override void DidReceiveMemoryWarning ()
+		{
+			base.DidReceiveMemoryWarning ();
 		}
 	}
 }

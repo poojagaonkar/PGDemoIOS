@@ -63,7 +63,7 @@
                                     <constraint id="1857" firstItem="1853" firstAttribute="height" constant="30"/>
                                 </constraints>
                                 <connections>
-                                    <segue id="2835" destination="2792" kind="show" identifier="timelineSegue"/>
+                                    <segue id="4296" destination="4044" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,7 +160,7 @@
         </scene>
         <scene sceneID="2791">
             <objects>
-                <tableViewController id="2792" sceneMemberID="viewController" customClass="TimelineController">
+                <tableViewController id="2792" sceneMemberID="viewController" customClass="TimelineController" storyboardIdentifier="TimelineController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2793">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +282,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2798" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="-11"/>
+            <point key="canvasLocation" x="1316" y="-18"/>
         </scene>
         <scene sceneID="3194">
             <objects>
@@ -323,7 +323,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3365" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="-98"/>
+            <point key="canvasLocation" x="2027" y="-40"/>
         </scene>
         <scene sceneID="3366">
             <objects>
@@ -534,6 +534,26 @@
             </objects>
             <point key="canvasLocation" x="2622" y="1700"/>
         </scene>
+        <scene sceneID="4043">
+            <objects>
+                <viewController id="4044" sceneMemberID="viewController" customClass="FBMenuController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4041"/>
+                        <viewControllerLayoutGuide type="bottom" id="4042"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4045">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="FBMenuView" destination="4045" id="name-outlet-4045"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4046" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-20"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook-icon.jpg" width="2100" height="561"/>
@@ -557,5 +577,6 @@
         <image name="reply.png" width="50" height="50"/>
         <image name="retweet.png" width="50" height="50"/>
         <image name="starr.png" width="50" height="50"/>
+        <image name="slideout.png" width="14" height="15"/>
     </resources>
 </document>

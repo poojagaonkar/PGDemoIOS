@@ -96,6 +96,10 @@
     <Reference Include="SDWebImage">
       <HintPath>..\Components\sdwebimage-3.7.3.1\lib\ios-unified\SDWebImage.dll</HintPath>
     </Reference>
+    <Reference Include="FlyoutNavigation">
+      <HintPath>..\Components\flyoutnavigation-1.5.1\lib\ios-unified\FlyoutNavigation.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -152,6 +156,11 @@
       <DependentUpon>TwitterConnectController.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IDataHelper.cs" />
+    <Compile Include="FBMenuController.cs" />
+    <Compile Include="FBMenuController.designer.cs">
+      <DependentUpon>FBMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlideOutViewControllerBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -172,6 +181,7 @@
     <BundleResource Include="Resources\reply.png" />
     <BundleResource Include="Resources\retweet.png" />
     <BundleResource Include="Resources\starr.png" />
+    <BundleResource Include="Resources\slideout.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
@@ -187,6 +197,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="sdwebimage">
       <Version>3.7.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="flyoutnavigation">
+      <Version>1.5.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

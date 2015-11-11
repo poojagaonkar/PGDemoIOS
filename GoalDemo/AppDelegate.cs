@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using FlyoutNavigation;
 
 namespace GoalDemo
 {
@@ -15,10 +16,12 @@ namespace GoalDemo
 			set;
 		}
 
+		public static FlyoutNavigationController FlyoutNavigation;
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
+			Window.MakeKeyAndVisible ();
 
 			// Code to start the Xamarin Test Cloud Agent
 			#if ENABLE_TEST_CLOUD
