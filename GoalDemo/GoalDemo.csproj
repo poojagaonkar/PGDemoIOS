@@ -161,6 +161,10 @@
       <DependentUpon>FBMenuController.cs</DependentUpon>
     </Compile>
     <Compile Include="SlideOutViewControllerBase.cs" />
+    <Compile Include="FBLoginController.cs" />
+    <Compile Include="FBLoginController.designer.cs">
+      <DependentUpon>FBLoginController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -181,7 +185,7 @@
     <BundleResource Include="Resources\reply.png" />
     <BundleResource Include="Resources\retweet.png" />
     <BundleResource Include="Resources\starr.png" />
-    <BundleResource Include="Resources\slideout.png" />
+    <BundleResource Include="images\slideout.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
@@ -189,6 +193,7 @@
     <Folder Include="CustomCells\" />
     <Folder Include="Controllers\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">

@@ -13,10 +13,15 @@ namespace GoalDemo
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			btnLogin.TouchDown += delegate {
-				UIViewController flyoutVC = new FBMenuController();
-				PresentViewController(flyoutVC, true, null);
-			};
+
+			btnLogin.TouchDown += BtnLogin_TouchDown;
+		}
+
+		void BtnLogin_TouchDown (object sender, EventArgs e)
+		{
+			
+			UIViewController flyoutVC = (FBMenuController)this.Storyboard.InstantiateViewController("FBMenuController");
+			PresentViewController(flyoutVC, true, null);
 		}
 	}
 }

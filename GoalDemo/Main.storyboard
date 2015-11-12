@@ -21,7 +21,7 @@
         </scene>
         <scene sceneID="1279">
             <objects>
-                <viewController id="1276" sceneMemberID="viewController">
+                <viewController id="1276" sceneMemberID="viewController" customClass="FBLoginController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1271"/>
                         <viewControllerLayoutGuide type="bottom" id="1272"/>
@@ -63,7 +63,6 @@
                                     <constraint id="1857" firstItem="1853" firstAttribute="height" constant="30"/>
                                 </constraints>
                                 <connections>
-                                    <segue id="4296" destination="4044" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,10 +82,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="1280"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="1853" id="name-outlet-1853"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1282" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="-2"/>
+            <point key="canvasLocation" x="32" y="-22"/>
         </scene>
         <scene sceneID="2141">
             <objects>
@@ -306,7 +308,7 @@
         </scene>
         <scene sceneID="3358">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="3359" sceneMemberID="viewController" title="TwiiterHomeController" customClass="TwitterTimelineTabController">
+                <tabBarController definesPresentationContext="YES" id="3359" sceneMemberID="viewController" title="TwiiterHomeController" customClass="TwitterTimelineTabController" storyboardIdentifier="TwitterTimelineTabController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3364" alpha="1" itemPositioning="fill">
                         <rect key="frame" x="0.0" y="551" width="600" height="49"/>
@@ -536,7 +538,7 @@
         </scene>
         <scene sceneID="4043">
             <objects>
-                <viewController id="4044" sceneMemberID="viewController" customClass="FBMenuController">
+                <viewController id="4044" sceneMemberID="viewController" customClass="FBMenuController" storyboardIdentifier="FBMenuController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4041"/>
                         <viewControllerLayoutGuide type="bottom" id="4042"/>
@@ -544,7 +546,7 @@
                     <view key="view" contentMode="scaleToFill" id="4045">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.31764705882352939" green="0.29411764705882354" blue="0.31372549019607843" alpha="1"/>
                     </view>
                     <connections>
                         <outlet property="FBMenuView" destination="4045" id="name-outlet-4045"/>
@@ -578,5 +580,6 @@
         <image name="retweet.png" width="50" height="50"/>
         <image name="starr.png" width="50" height="50"/>
         <image name="slideout.png" width="14" height="15"/>
+        <image name="images/slideout.png" width="14" height="15"/>
     </resources>
 </document>

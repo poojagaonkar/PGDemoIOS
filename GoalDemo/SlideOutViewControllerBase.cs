@@ -14,10 +14,10 @@ namespace GoalDemo
 		{
 			base.ViewDidLoad ();
 
-			/*UIBarButtonItem menuIndicator = new UIBarButtonItem (UIImage.FromBundle ("images/slideout.png"), UIBarButtonItemStyle.Plain, (sender, e) => {
+			UIBarButtonItem menuIndicator = new UIBarButtonItem (UIImage.FromBundle ("images/slideout.png"), UIBarButtonItemStyle.Plain, (sender, e) => {
 				AppDelegate.FlyoutNavigation.ToggleMenu ();
 			});
-			NavigationItem.SetLeftBarButtonItem (menuIndicator, false);*/
+			NavigationItem.SetLeftBarButtonItem (menuIndicator, false);
 		}
 	}
 
