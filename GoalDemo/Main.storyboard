@@ -62,8 +62,7 @@
                                 <constraints>
                                     <constraint id="1857" firstItem="1853" firstAttribute="height" constant="30"/>
                                 </constraints>
-                                <connections>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                         <constraints>
@@ -189,7 +188,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="3029" translatesAutoresizingMaskIntoConstraints="NO" tag="1">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="3029" translatesAutoresizingMaskIntoConstraints="NO" tag="1" numberOfLines="0">
                                             <rect key="frame" x="20" y="70" width="553" height="20.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -260,6 +259,7 @@
                                         <constraint firstItem="3166" firstAttribute="leading" secondItem="2842" secondAttribute="trailing" constant="8" id="3169"/>
                                         <constraint firstItem="2797" firstAttribute="trailing" secondItem="3166" secondAttribute="trailing" constant="27" id="3170"/>
                                         <constraint firstItem="2845" firstAttribute="leading" secondItem="2842" secondAttribute="trailing" constant="10" id="3171"/>
+                                        <constraint firstItem="2797" firstAttribute="bottom" secondItem="3029" secondAttribute="bottom" constant="79" id="4060"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

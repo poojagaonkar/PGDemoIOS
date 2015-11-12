@@ -9,6 +9,7 @@ namespace GoalDemo
 	public class RootTableSource : UITableViewSource
 	{
 		TimelineModel[] mData;
+		TimelineCustomCel cell;
 		public RootTableSource (TimelineModel[] mData)
 		{
 			this.mData = mData;
@@ -16,7 +17,7 @@ namespace GoalDemo
 		#region implemented abstract members of UITableViewSource
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
-			var cell = tableView.DequeueReusableCell ("timelineCell") as TimelineCustomCel;
+		 cell = tableView.DequeueReusableCell ("timelineCell") as TimelineCustomCel;
 			cell.UpdateCell(mData [indexPath.Row].UserName, UIImage.FromFile (mData[indexPath.Row].ImageName),mData [indexPath.Row].Detail,mData [indexPath.Row].NumLikes, mData [indexPath.Row].NumComments,mData [indexPath.Row].PostDate );
 		
 
@@ -32,10 +33,11 @@ namespace GoalDemo
 		public TimelineModel GetItem(nint id){
 			return mData [id];
 		}
-		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
+		/*public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 		{
+			
 			return 182;
-		}
+		}*/
 	}
 
 }

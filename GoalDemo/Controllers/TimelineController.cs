@@ -26,7 +26,10 @@ namespace GoalDemo
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			TableView.RowHeight = UITableView.AutomaticDimension;
+			TableView.EstimatedRowHeight = 182;
 			TableView.Source = new RootTableSource(_timelineData.ToArray());
+
 		}
 		public override void ViewDidAppear (bool animated)
 		{
