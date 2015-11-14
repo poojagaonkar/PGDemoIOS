@@ -40,12 +40,21 @@ namespace GoalDemo
 					var mList =   GetTwitterData();
 
 					twitterHomeTableView.RowHeight = UITableView.AutomaticDimension;
-					twitterHomeTableView.EstimatedRowHeight = 160;
+					twitterHomeTableView.EstimatedRowHeight = 150;
 
 					twitterHomeTableView.Source = new TwitterHomeSource(mList.ToArray());
-					//twitterHomeTableView.ReloadData();
+					twitterHomeTableView.ReloadData();
 				
+					/*mList.ContinueWith((Task<List<Status>> arg) => {
 
+						myList = arg.Result;
+
+					});
+					if(mList.IsCompleted){
+						twitterHomeTableView.Source = new TwitterHomeSource(myList.ToArray());
+					}*/
+
+				
 
 
 				}
@@ -64,7 +73,11 @@ namespace GoalDemo
 			IEnumerable<Xamarin.Auth.Account> accounts = AccountStore.Create().FindAccountsForService("Twitter");
 
 			//check the account store for a valid account marked as "Twitter" and then hold on to it for future requests
-
+			/*foreach (Xamarin.Auth.Account account in accounts)
+			{
+				loggedInAccount = account;
+				break;
+			}*/
 			var cred = new LinqToTwitter.InMemoryCredentialStore();
 			cred.ConsumerKey = loggedInAccount.Properties["oauth_consumer_key"];
 			cred.ConsumerSecret = loggedInAccount.Properties["oauth_consumer_secret"];

@@ -17,11 +17,11 @@ namespace GoalDemo
 
 		public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-			if (cell == null) {
+
 				cell = tableView.DequeueReusableCell ("twitterHomeCell") as TwitterHomeCell;
 				var item = mFeedList [indexPath.Row];
 				cell.UpdateCell (item.User.Name, item.User.ProfileImageUrl, item.Text, item.User.ScreenNameResponse, item.CreatedAt.ToShortDateString ());
-			}
+
 			return cell;
 		}
 

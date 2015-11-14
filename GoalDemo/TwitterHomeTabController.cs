@@ -2,24 +2,20 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
-using Xamarin.Auth;
+using LinqToTwitter;
 using System.Linq;
 using System.Collections.Generic;
-using LinqToTwitter;
-using System.Threading.Tasks;
-using CoreGraphics;
-
+using Xamarin.Auth;
 
 namespace GoalDemo
 {
-	partial class TwitterHomwController : UIViewController
+	partial class TwitterHomeTabController : UITableViewController
 	{
 		private Xamarin.Auth.Account loggedInAccount;
 		private List<Status> myList;
-		public TwitterHomwController (IntPtr handle) : base (handle)
+		public TwitterHomeTabController (IntPtr handle) : base (handle)
 		{
 		}
-
 		public override  void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -39,12 +35,21 @@ namespace GoalDemo
 					GetUserData ();
 					var mList =   GetTwitterData();
 
-					twitterHomeTableView.RowHeight = UITableView.AutomaticDimension;
-					twitterHomeTableView.EstimatedRowHeight = 160;
+					TableView.RowHeight = UITableView.AutomaticDimension;
+					//twitterHomeTableView.EstimatedRowHeight = 150;
 
-					twitterHomeTableView.Source = new TwitterHomeSource(mList.ToArray());
-					//twitterHomeTableView.ReloadData();
-				
+					TableView.Source = new TwitterHomeSource(mList.ToArray());
+					TableView.ReloadData();
+
+					/*mList.ContinueWith((Task<List<Status>> arg) => {
+
+						myList = arg.Result;
+
+					});
+					if(mList.IsCompleted){
+						twitterHomeTableView.Source = new TwitterHomeSource(myList.ToArray());
+					}*/
+
 
 
 
@@ -58,13 +63,17 @@ namespace GoalDemo
 
 
 		}
-		 public  List<LinqToTwitter.Status> GetTwitterData()
+		public  List<LinqToTwitter.Status> GetTwitterData()
 		{
 			//has the user already authenticated from a previous session? see AccountStore.Create().Save() later
 			IEnumerable<Xamarin.Auth.Account> accounts = AccountStore.Create().FindAccountsForService("Twitter");
 
 			//check the account store for a valid account marked as "Twitter" and then hold on to it for future requests
-
+			/*foreach (Xamarin.Auth.Account account in accounts)
+			{
+				loggedInAccount = account;
+				break;
+			}*/
 			var cred = new LinqToTwitter.InMemoryCredentialStore();
 			cred.ConsumerKey = loggedInAccount.Properties["oauth_consumer_key"];
 			cred.ConsumerSecret = loggedInAccount.Properties["oauth_consumer_secret"];
