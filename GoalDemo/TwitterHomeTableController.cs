@@ -2,28 +2,18 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
+using System.Collections.Generic;
 using Xamarin.Auth;
 using System.Linq;
-using System.Collections.Generic;
-using LinqToTwitter;
-using System.Threading.Tasks;
-using CoreGraphics;
-
 
 namespace GoalDemo
 {
-	partial class TwitterHomwController : UIViewController
+	partial class TwitterHomeTableController : UITableViewController
 	{
-		/*private Xamarin.Auth.Account loggedInAccount;
-		private List<Status> myList;
-		public TwitterHomwController (IntPtr handle) : base (handle)
+		private Xamarin.Auth.Account loggedInAccount;
+		private List<LinqToTwitter.Status> mList;
+		public TwitterHomeTableController (IntPtr handle) : base (handle)
 		{
-		}
-
-		public override  void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-
 			var auth = new OAuth1Authenticator ("Ywun66NxYNMXgjzNRdIG12q4k",
 				"XQAQ5djSlMOiXfMhn5rl4fdPahqw0wNPW6nBS5I9aRCajbxMvJ",
 				new Uri("https://api.twitter.com/oauth/request_token"),
@@ -37,14 +27,11 @@ namespace GoalDemo
 
 					loggedInAccount = e.Account;
 					GetUserData ();
-					var mList =   GetTwitterData();
+					 mList =   GetTwitterData();
 
-					twitterHomeTableView.RowHeight = UITableView.AutomaticDimension;
-					twitterHomeTableView.EstimatedRowHeight = 160;
-
-					twitterHomeTableView.Source = new TwitterHomeSource(mList.ToArray());
-					//twitterHomeTableView.ReloadData();
 				
+					//twitterHomeTableView.ReloadData();
+
 
 
 
@@ -54,11 +41,17 @@ namespace GoalDemo
 
 			var ui = auth.GetUI();
 			PresentViewController(ui, true, null);
+		}
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			TableView.RowHeight = UITableView.AutomaticDimension;
+			TableView.EstimatedRowHeight = 160;
 
-
+			TableView.Source = new TwitterHomeSource(mList.ToArray());
 
 		}
-		 public  List<LinqToTwitter.Status> GetTwitterData()
+		public  List<LinqToTwitter.Status> GetTwitterData()
 		{
 			//has the user already authenticated from a previous session? see AccountStore.Create().Save() later
 			IEnumerable<Xamarin.Auth.Account> accounts = AccountStore.Create().FindAccountsForService("Twitter");
@@ -108,6 +101,6 @@ namespace GoalDemo
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
-		}*/
+		}
 	}
-	}
+}

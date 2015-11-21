@@ -11,11 +11,19 @@ using UIKit;
 
 namespace GoalDemo
 {
-	[Register ("TwitterTimelineTabController")]
-	partial class TwitterTimelineTabController
+	[Register ("TwitterHomeTableController")]
+	partial class TwitterHomeTableController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITableView TwitterHomeView { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (TwitterHomeView != null) {
+				TwitterHomeView.Dispose ();
+				TwitterHomeView = null;
+			}
 		}
 	}
 }
