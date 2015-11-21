@@ -312,6 +312,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue id="4278" destination="4235" kind="relationship" relationship="viewControllers"/>
+                        <segue id="4492" destination="4246" kind="relationship" relationship="viewControllers"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3365" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -368,7 +369,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4164" translatesAutoresizingMaskIntoConstraints="NO">
-                                            <rect key="frame" x="131.5" y="12" width="26" height="12"/>
+                                            <rect key="frame" x="131.5" y="14" width="26" height="12"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -382,15 +383,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4182" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0">
-                                            <rect key="frame" x="90" y="45" width="490" height="117.5"/>
+                                            <rect key="frame" x="90" y="35" width="490" height="127.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="4182" firstAttribute="top" secondItem="4117" secondAttribute="top" constant="45" id="4316"/>
+                                        <constraint firstItem="4182" firstAttribute="top" secondItem="4117" secondAttribute="top" constant="35" id="4316"/>
                                         <constraint firstItem="4182" firstAttribute="leading" secondItem="4117" secondAttribute="leading" constant="90" id="4317"/>
                                         <constraint firstItem="4117" firstAttribute="bottom" secondItem="4182" secondAttribute="bottom" constant="20" id="4318"/>
                                         <constraint firstItem="4117" firstAttribute="trailing" secondItem="4182" secondAttribute="trailing" constant="20" id="4319"/>
@@ -400,7 +401,7 @@
                                         <constraint firstItem="4160" firstAttribute="top" secondItem="4117" secondAttribute="top" constant="12" id="4371"/>
                                         <constraint firstItem="4168" firstAttribute="top" secondItem="4117" secondAttribute="top" constant="12" id="4376"/>
                                         <constraint firstItem="4117" firstAttribute="trailing" secondItem="4168" secondAttribute="trailing" constant="10" id="4379"/>
-                                        <constraint firstItem="4164" firstAttribute="top" secondItem="4117" secondAttribute="top" constant="12" id="4380"/>
+                                        <constraint firstItem="4164" firstAttribute="top" secondItem="4117" secondAttribute="top" constant="14" id="4380"/>
                                         <constraint firstItem="4164" firstAttribute="leading" secondItem="4160" secondAttribute="trailing" constant="8" id="4381"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -443,6 +444,8 @@
                     <connections>
                         <outlet property="tempView" destination="4247" id="name-outlet-4247"/>
                     </connections>
+                    <tabBarItem key="tabBarItem" title="Connect" id="4491" image="twitat.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4248" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -464,10 +467,10 @@
         <image name="user3.png" width="512" height="512"/>
         <image name="user4.png" width="184" height="274"/>
         <image name="user5.png" width="225" height="225"/>
-        <image name="twitat.png" width="100" height="100"/>
-        <image name="twithash.png" width="100" height="100"/>
-        <image name="twithome.png" width="100" height="100"/>
-        <image name="twituser.png" width="100" height="100"/>
+        <image name="twitat.png" width="30" height="30"/>
+        <image name="twithash.png" width="30" height="30"/>
+        <image name="twithome.png" width="30" height="30"/>
+        <image name="twituser.png" width="30" height="30"/>
         <image name="reply.png" width="50" height="50"/>
         <image name="retweet.png" width="50" height="50"/>
         <image name="starr.png" width="50" height="50"/>

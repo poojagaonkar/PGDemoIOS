@@ -20,7 +20,7 @@ namespace GoalDemo
 
 				cell = tableView.DequeueReusableCell ("twitterHomeCell") as TwitterHomeCell;
 				var item = mFeedList [indexPath.Row];
-				cell.UpdateCell (item.User.Name, item.User.ProfileImageUrl, item.Text, item.User.ScreenNameResponse, item.CreatedAt.ToShortDateString ());
+				cell.UpdateCell (item.User.Name, item.User.ProfileImageUrl, item.Text, item.User.ScreenNameResponse, item.CreatedAt);
 
 			return cell;
 		}

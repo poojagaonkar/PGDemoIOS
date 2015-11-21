@@ -6,6 +6,7 @@ using LinqToTwitter;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Auth;
+using BigTed;
 
 namespace GoalDemo
 {
@@ -30,6 +31,7 @@ namespace GoalDemo
 			auth.Completed += (sender, e) => {
 				DismissViewController (true, null);
 				if (e.IsAuthenticated) {
+					
 
 					loggedInAccount = e.Account;
 					GetUserData ();
@@ -56,6 +58,7 @@ namespace GoalDemo
 		}
 		public  List<LinqToTwitter.Status> GetTwitterData()
 		{
+			BTProgressHUD.Show();
 			//has the user already authenticated from a previous session? see AccountStore.Create().Save() later
 			IEnumerable<Xamarin.Auth.Account> accounts = AccountStore.Create().FindAccountsForService("Twitter");
 
@@ -76,7 +79,7 @@ namespace GoalDemo
 				(from tweet in TwitterCtx.Status
 					where tweet.Type == LinqToTwitter.StatusType.Home
 					select tweet).ToList();
-
+			BTProgressHUD.Dismiss();
 			return tl;
 			//Console.WriteLine("Tweets Returned: " + tl.Count.ToString());
 		}
@@ -85,6 +88,10 @@ namespace GoalDemo
 		async public void GetUserData()
 		{
 			//use the account object and make the desired API call
+			InvokeOnMainThread(()=>{
+				BTProgressHUD.Show();}
+			);
+
 			var request = new OAuth1Request (
 				"GET",
 				new Uri ("https://api.twitter.com/1.1/account/verify_credentials.json "),
@@ -100,6 +107,10 @@ namespace GoalDemo
 
 
 			});
+			InvokeOnMainThread(()=>{
+				BTProgressHUD.Dismiss();}
+			);
+
 		}
 		public override void DidReceiveMemoryWarning ()
 		{

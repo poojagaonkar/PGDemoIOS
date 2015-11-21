@@ -100,6 +100,9 @@
     <Reference Include="SDWebImage">
       <HintPath>..\Components\sdwebimage-3.7.3.1\lib\ios-unified\SDWebImage.dll</HintPath>
     </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.18\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -169,6 +172,7 @@
     <Compile Include="TwitterNewHome.designer.cs">
       <DependentUpon>TwitterNewHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\CalculateRelativeTime.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -198,6 +202,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Interfaces\" />
     <Folder Include="images\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
@@ -210,6 +215,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="flyoutnavigation">
       <Version>1.5.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.18</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
