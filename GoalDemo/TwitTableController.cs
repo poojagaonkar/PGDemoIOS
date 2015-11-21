@@ -1,20 +1,18 @@
-using Foundation;
-using System;
-using System.CodeDom.Compiler;
+﻿using System;
 using UIKit;
+using LinqToTwitter;
 using System.Collections.Generic;
 using Xamarin.Auth;
 using System.Linq;
 
 namespace GoalDemo
 {
-	partial class TwitterHomeTableController : UITableViewController
+	public class TwitTableController : UITableViewController
 	{
 		private Xamarin.Auth.Account loggedInAccount;
-		private List<LinqToTwitter.Status> mList;
-		public TwitterHomeTableController (IntPtr handle) : base (handle)
+		private List<Status> myList;
+		public TwitTableController ()
 		{
-			
 		}
 		public override void ViewDidLoad ()
 		{
@@ -32,7 +30,7 @@ namespace GoalDemo
 
 					loggedInAccount = e.Account;
 					GetUserData ();
-					mList =   GetTwitterData();
+					var mList =   GetTwitterData();
 
 					TableView.RowHeight = UITableView.AutomaticDimension;
 					TableView.EstimatedRowHeight = 160;
@@ -49,6 +47,7 @@ namespace GoalDemo
 
 			var ui = auth.GetUI();
 			PresentViewController(ui, true, null);
+
 
 
 		}
@@ -105,3 +104,4 @@ namespace GoalDemo
 		}
 	}
 }
+

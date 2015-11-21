@@ -13,7 +13,7 @@ namespace GoalDemo
 		}
 		public void UpdateCell (string name, string image, string tweet, string handle, string postDate)
 		{
-			labelHandle.Text = handle;
+			labelHandle.Text = "@"+handle;
 			labelTweetText.Text = tweet;
 			labelUserName.Text = name;
 			labelTweetTime.Text = postDate;

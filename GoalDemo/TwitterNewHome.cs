@@ -2,23 +2,24 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
+using LinqToTwitter;
 using System.Collections.Generic;
-using Xamarin.Auth;
 using System.Linq;
+using Xamarin.Auth;
 
 namespace GoalDemo
 {
-	partial class TwitterHomeTableController : UITableViewController
+	partial class TwitterNewHome : UITableViewController
 	{
 		private Xamarin.Auth.Account loggedInAccount;
-		private List<LinqToTwitter.Status> mList;
-		public TwitterHomeTableController (IntPtr handle) : base (handle)
+		private List<Status> myList;
+		public TwitterNewHome (IntPtr handle) : base (handle)
 		{
-			
 		}
-		public override void ViewDidLoad ()
+		public override  void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
 			var auth = new OAuth1Authenticator ("Ywun66NxYNMXgjzNRdIG12q4k",
 				"XQAQ5djSlMOiXfMhn5rl4fdPahqw0wNPW6nBS5I9aRCajbxMvJ",
 				new Uri("https://api.twitter.com/oauth/request_token"),
@@ -32,7 +33,7 @@ namespace GoalDemo
 
 					loggedInAccount = e.Account;
 					GetUserData ();
-					mList =   GetTwitterData();
+					var mList =   GetTwitterData();
 
 					TableView.RowHeight = UITableView.AutomaticDimension;
 					TableView.EstimatedRowHeight = 160;
@@ -49,6 +50,7 @@ namespace GoalDemo
 
 			var ui = auth.GetUI();
 			PresentViewController(ui, true, null);
+
 
 
 		}

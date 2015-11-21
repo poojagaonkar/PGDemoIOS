@@ -161,9 +161,13 @@
     <Compile Include="FBLoginController.designer.cs">
       <DependentUpon>FBLoginController.cs</DependentUpon>
     </Compile>
-    <Compile Include="TwitterHomeTableController.cs" />
-    <Compile Include="TwitterHomeTableController.designer.cs">
-      <DependentUpon>TwitterHomeTableController.cs</DependentUpon>
+    <Compile Include="TwitterConnectController.cs" />
+    <Compile Include="TwitterConnectController.designer.cs">
+      <DependentUpon>TwitterConnectController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterNewHome.cs" />
+    <Compile Include="TwitterNewHome.designer.cs">
+      <DependentUpon>TwitterNewHome.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
