@@ -173,6 +173,15 @@
       <DependentUpon>TwitterNewHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\CalculateRelativeTime.cs" />
+    <Compile Include="TwitterMeController.cs" />
+    <Compile Include="TwitterMeController.designer.cs">
+      <DependentUpon>TwitterMeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCells\TwitterMeStaticCell.cs" />
+    <Compile Include="CustomCells\TwitterMeStaticCell.designer.cs">
+      <DependentUpon>TwitterMeStaticCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSources\TwitterMeSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -194,6 +203,7 @@
     <BundleResource Include="Resources\retweet.png" />
     <BundleResource Include="Resources\starr.png" />
     <BundleResource Include="images\slideout.png" />
+    <BundleResource Include="Resources\backpng.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

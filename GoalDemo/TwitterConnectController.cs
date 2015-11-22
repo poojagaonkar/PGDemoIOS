@@ -10,5 +10,10 @@ namespace GoalDemo
 		public TwitterConnectController (IntPtr handle) : base (handle)
 		{
 		}
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			this.NavigationController.Title = "Connect";
+		}
 	}
 }
