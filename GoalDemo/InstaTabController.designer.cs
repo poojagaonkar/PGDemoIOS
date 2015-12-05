@@ -11,11 +11,19 @@ using UIKit;
 
 namespace GoalDemo
 {
-	[Register ("TwitterMeController")]
-	partial class TwitterMeController
+	[Register ("InstaTabController")]
+	partial class InstaTabController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITableView InstaTableView { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (InstaTableView != null) {
+				InstaTableView.Dispose ();
+				InstaTableView = null;
+			}
 		}
 	}
 }

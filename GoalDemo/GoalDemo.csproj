@@ -123,7 +123,6 @@
     <Compile Include="SocialOptions.designer.cs">
       <DependentUpon>SocialOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\TimelineModel.cs" />
     <Compile Include="TableSources\RootTableSource.cs" />
     <Compile Include="TableSources\TwitterHomeSource.cs" />
     <Compile Include="CustomCells\TimelineCustomCel.cs" />
@@ -182,6 +181,16 @@
       <DependentUpon>TwitterMeStaticCell.cs</DependentUpon>
     </Compile>
     <Compile Include="TableSources\TwitterMeSource.cs" />
+    <Compile Include="TimelineModel.cs" />
+    <Compile Include="InstaTabController.cs" />
+    <Compile Include="InstaTabController.designer.cs">
+      <DependentUpon>InstaTabController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstaTableSource.cs" />
+    <Compile Include="InstaTabControllerCell.cs" />
+    <Compile Include="InstaTabControllerCell.designer.cs">
+      <DependentUpon>InstaTabControllerCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -204,6 +213,15 @@
     <BundleResource Include="Resources\starr.png" />
     <BundleResource Include="images\slideout.png" />
     <BundleResource Include="Resources\backpng.png" />
+    <BundleResource Include="Resources\instacam.png" />
+    <BundleResource Include="Resources\instahome.png" />
+    <BundleResource Include="Resources\instaprofile.png" />
+    <BundleResource Include="Resources\instarecent.png" />
+    <BundleResource Include="Resources\Like.png" />
+    <BundleResource Include="Resources\More.png" />
+    <BundleResource Include="Resources\Redo.png" />
+    <BundleResource Include="Resources\Search.png" />
+    <BundleResource Include="Resources\Topic.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

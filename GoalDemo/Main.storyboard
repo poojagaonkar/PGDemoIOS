@@ -136,6 +136,9 @@
                                 <constraints>
                                     <constraint id="2490" firstItem="2489" firstAttribute="height" constant="90"/>
                                 </constraints>
+                                <connections>
+                                    <segue id="4812" destination="4710" kind="show"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -285,26 +288,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2798" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1316" y="-18"/>
-        </scene>
-        <scene sceneID="3194">
-            <objects>
-                <viewController id="3195" sceneMemberID="viewController" customClass="TwitterController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3192"/>
-                        <viewControllerLayoutGuide type="bottom" id="3193"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3196">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="TwitterView" destination="3196" id="name-outlet-3196"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3197" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2420" y="1317"/>
         </scene>
         <scene sceneID="3358">
             <objects>
@@ -485,7 +468,7 @@
         </scene>
         <scene sceneID="4555">
             <objects>
-                <tableViewController id="4556" sceneMemberID="viewController">
+                <tableViewController id="4556" sceneMemberID="viewController" customClass="TwitterMeController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4557">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -739,6 +722,151 @@
             </objects>
             <point key="canvasLocation" x="4632" y="-61"/>
         </scene>
+        <scene sceneID="4709">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="4710" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="4715">
+                        <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue id="4928" destination="4881" kind="relationship" relationship="viewControllers"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4716" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="1066"/>
+        </scene>
+        <scene sceneID="4880">
+            <objects>
+                <tableViewController id="4881" sceneMemberID="viewController" customClass="InstaTabController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4882">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4885" rowHeight="442" customClass="InstaTabControllerCell" reuseIdentifier="instaReuseCell">
+                                <rect key="frame" x="0.0" y="22" width="600" height="442"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4885" id="4886">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="441.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4889" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="20" y="20" width="36" height="32"/>
+                                            <constraints>
+                                                <constraint id="4892" firstItem="4889" firstAttribute="height" constant="32"/>
+                                                <constraint id="4893" firstItem="4889" firstAttribute="width" constant="36"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4894" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="64" y="26" width="224" height="13.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.12549019607843137" green="0.25098039215686274" blue="0.50196078431372548" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4930" translatesAutoresizingMaskIntoConstraints="NO" image="backpng.png">
+                                            <rect key="frame" x="0.0" y="66" width="600" height="282"/>
+                                            <constraints>
+                                                <constraint id="5016" firstItem="4930" firstAttribute="height" constant="282"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4939" translatesAutoresizingMaskIntoConstraints="NO" image="Like.png">
+                                            <rect key="frame" x="12" y="355" width="27" height="23"/>
+                                            <constraints>
+                                                <constraint id="5025" firstItem="4939" firstAttribute="width" constant="27"/>
+                                                <constraint id="5026" firstItem="4939" firstAttribute="height" constant="23"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4944" translatesAutoresizingMaskIntoConstraints="NO" image="Topic.png">
+                                            <rect key="frame" x="47" y="355" width="27" height="23"/>
+                                            <constraints>
+                                                <constraint id="5029" firstItem="4944" firstAttribute="width" constant="27"/>
+                                                <constraint id="5030" firstItem="4944" firstAttribute="height" constant="23"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4949" translatesAutoresizingMaskIntoConstraints="NO" image="Redo.png">
+                                            <rect key="frame" x="82" y="355" width="27" height="23"/>
+                                            <constraints>
+                                                <constraint id="5037" firstItem="4949" firstAttribute="width" constant="27"/>
+                                                <constraint id="5038" firstItem="4949" firstAttribute="height" constant="23"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4954" translatesAutoresizingMaskIntoConstraints="NO" image="More.png">
+                                            <rect key="frame" x="565" y="355" width="27" height="23"/>
+                                            <constraints>
+                                                <constraint id="5045" firstItem="4954" firstAttribute="height" constant="23"/>
+                                                <constraint id="5046" firstItem="4954" firstAttribute="width" constant="27"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4961" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="12" y="386" width="224" height="13.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.12549019607843137" green="0.25098039215686274" blue="0.50196078431372548" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4965" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0">
+                                            <rect key="frame" x="12" y="403" width="580" height="18.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4889" firstAttribute="top" secondItem="4886" secondAttribute="top" constant="20" id="4890"/>
+                                        <constraint firstItem="4889" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="20" id="4891"/>
+                                        <constraint firstItem="4894" firstAttribute="top" secondItem="4886" secondAttribute="top" constant="26" id="4896"/>
+                                        <constraint firstItem="4886" firstAttribute="trailing" secondItem="4894" secondAttribute="trailing" constant="312" id="4897"/>
+                                        <constraint firstItem="4894" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="64" id="4980"/>
+                                        <constraint firstItem="4965" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5007"/>
+                                        <constraint firstItem="4886" firstAttribute="bottom" secondItem="4965" secondAttribute="bottom" constant="20" id="5008"/>
+                                        <constraint firstItem="4886" firstAttribute="trailing" secondItem="4965" secondAttribute="trailing" constant="8" id="5009"/>
+                                        <constraint firstItem="4930" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="0.0" id="5013"/>
+                                        <constraint firstItem="4930" firstAttribute="trailing" secondItem="4886" secondAttribute="trailing" constant="0.0" id="5014"/>
+                                        <constraint firstItem="4930" firstAttribute="top" secondItem="4889" secondAttribute="bottom" constant="14" id="5017"/>
+                                        <constraint firstItem="4965" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="55" id="5018"/>
+                                        <constraint firstItem="4939" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5023"/>
+                                        <constraint firstItem="4939" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5024"/>
+                                        <constraint firstItem="4944" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5027"/>
+                                        <constraint firstItem="4944" firstAttribute="leading" secondItem="4939" secondAttribute="trailing" constant="8" id="5028"/>
+                                        <constraint firstItem="4949" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5035"/>
+                                        <constraint firstItem="4949" firstAttribute="leading" secondItem="4944" secondAttribute="trailing" constant="8" id="5036"/>
+                                        <constraint firstItem="4954" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5043"/>
+                                        <constraint firstItem="4886" firstAttribute="trailing" secondItem="4954" secondAttribute="trailing" constant="8" id="5044"/>
+                                        <constraint firstItem="4961" firstAttribute="top" secondItem="4939" secondAttribute="bottom" constant="8" id="5047"/>
+                                        <constraint firstItem="4961" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5048"/>
+                                        <constraint firstItem="4886" firstAttribute="trailing" secondItem="4961" secondAttribute="trailing" constant="364" id="5049"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="instaProfileImage" destination="4889" id="name-outlet-4889"/>
+                                    <outlet property="labelInstaUser" destination="4894" id="name-outlet-4894"/>
+                                    <outlet property="instaPic" destination="4930" id="name-outlet-4930"/>
+                                    <outlet property="labelInstaUser1" destination="4961" id="name-outlet-4961"/>
+                                    <outlet property="instaLabelStatis" destination="4965" id="name-outlet-4965"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4881" id="4883"/>
+                            <outlet property="delegate" destination="4881" id="4884"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" id="4927" image="instahome.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="InstaTableView" destination="4882" id="name-outlet-4882"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4887" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053" y="1059"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook-icon.jpg" width="2100" height="561"/>
@@ -765,5 +893,14 @@
         <image name="slideout.png" width="14" height="15"/>
         <image name="images/slideout.png" width="14" height="15"/>
         <image name="backpng.png" width="1118" height="508"/>
+        <image name="instacam.png" width="32" height="32"/>
+        <image name="instahome.png" width="32" height="32"/>
+        <image name="instaprofile.png" width="32" height="32"/>
+        <image name="instarecent.png" width="32" height="32"/>
+        <image name="Like.png" width="32" height="32"/>
+        <image name="More.png" width="32" height="32"/>
+        <image name="Redo.png" width="32" height="32"/>
+        <image name="Search.png" width="32" height="32"/>
+        <image name="Topic.png" width="32" height="32"/>
     </resources>
 </document>
