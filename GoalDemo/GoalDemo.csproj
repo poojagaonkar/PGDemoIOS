@@ -222,6 +222,13 @@
     <BundleResource Include="Resources\Redo.png" />
     <BundleResource Include="Resources\Search.png" />
     <BundleResource Include="Resources\Topic.png" />
+    <BundleResource Include="Resources\instaimage2.jpg" />
+    <BundleResource Include="Resources\instaimage3.jpg" />
+    <BundleResource Include="Resources\instaimage4.png" />
+    <BundleResource Include="Resources\puppy1.jpg" />
+    <BundleResource Include="Resources\instaimage2.png" />
+    <BundleResource Include="Resources\instaimage3.png" />
+    <BundleResource Include="Resources\puppy1.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

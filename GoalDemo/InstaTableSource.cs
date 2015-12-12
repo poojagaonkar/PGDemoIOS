@@ -17,7 +17,7 @@ namespace GoalDemo
 		public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
 			cell = tableView.DequeueReusableCell ("instaReuseCell") as InstaTabControllerCell;
-			cell.UpdateCell(mData [indexPath.Row].UserName, UIImage.FromFile (mData[indexPath.Row].ImageName),mData [indexPath.Row].Detail,mData [indexPath.Row].NumLikes, mData [indexPath.Row].NumComments,mData [indexPath.Row].PostDate );
+			cell.UpdateCell(mData [indexPath.Row].UserName, UIImage.FromFile (mData[indexPath.Row].ImageName),mData [indexPath.Row].Detail,mData [indexPath.Row].NumLikes, mData [indexPath.Row].NumComments,mData [indexPath.Row].PostDate,UIImage.FromFile (mData[indexPath.Row].PostImage) );
 
 
 			return cell;

@@ -760,8 +760,9 @@
                                                 <constraint id="4892" firstItem="4889" firstAttribute="height" constant="32"/>
                                                 <constraint id="4893" firstItem="4889" firstAttribute="width" constant="36"/>
                                             </constraints>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.611764705882353" green="0.77647058823529413" blue="1" alpha="1"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4894" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4894" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0" fixedFrame="YES">
                                             <rect key="frame" x="64" y="26" width="224" height="13.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
@@ -772,13 +773,6 @@
                                             <rect key="frame" x="0.0" y="66" width="600" height="282"/>
                                             <constraints>
                                                 <constraint id="5016" firstItem="4930" firstAttribute="height" constant="282"/>
-                                            </constraints>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4939" translatesAutoresizingMaskIntoConstraints="NO" image="Like.png">
-                                            <rect key="frame" x="12" y="355" width="27" height="23"/>
-                                            <constraints>
-                                                <constraint id="5025" firstItem="4939" firstAttribute="width" constant="27"/>
-                                                <constraint id="5026" firstItem="4939" firstAttribute="height" constant="23"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4944" translatesAutoresizingMaskIntoConstraints="NO" image="Topic.png">
@@ -802,7 +796,7 @@
                                                 <constraint id="5046" firstItem="4954" firstAttribute="width" constant="27"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4961" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4961" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                             <rect key="frame" x="12" y="386" width="224" height="13.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
@@ -816,13 +810,20 @@
                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5095" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="12" y="356" width="27" height="22"/>
+                                            <state key="normal" backgroundImage="Like.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <constraints>
+                                                <constraint id="5098" firstItem="5095" firstAttribute="width" constant="27"/>
+                                                <constraint id="5099" firstItem="5095" firstAttribute="height" constant="22"/>
+                                            </constraints>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="4889" firstAttribute="top" secondItem="4886" secondAttribute="top" constant="20" id="4890"/>
                                         <constraint firstItem="4889" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="20" id="4891"/>
-                                        <constraint firstItem="4894" firstAttribute="top" secondItem="4886" secondAttribute="top" constant="26" id="4896"/>
-                                        <constraint firstItem="4886" firstAttribute="trailing" secondItem="4894" secondAttribute="trailing" constant="312" id="4897"/>
-                                        <constraint firstItem="4894" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="64" id="4980"/>
                                         <constraint firstItem="4965" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5007"/>
                                         <constraint firstItem="4886" firstAttribute="bottom" secondItem="4965" secondAttribute="bottom" constant="20" id="5008"/>
                                         <constraint firstItem="4886" firstAttribute="trailing" secondItem="4965" secondAttribute="trailing" constant="8" id="5009"/>
@@ -830,17 +831,14 @@
                                         <constraint firstItem="4930" firstAttribute="trailing" secondItem="4886" secondAttribute="trailing" constant="0.0" id="5014"/>
                                         <constraint firstItem="4930" firstAttribute="top" secondItem="4889" secondAttribute="bottom" constant="14" id="5017"/>
                                         <constraint firstItem="4965" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="55" id="5018"/>
-                                        <constraint firstItem="4939" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5023"/>
-                                        <constraint firstItem="4939" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5024"/>
                                         <constraint firstItem="4944" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5027"/>
-                                        <constraint firstItem="4944" firstAttribute="leading" secondItem="4939" secondAttribute="trailing" constant="8" id="5028"/>
                                         <constraint firstItem="4949" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5035"/>
                                         <constraint firstItem="4949" firstAttribute="leading" secondItem="4944" secondAttribute="trailing" constant="8" id="5036"/>
                                         <constraint firstItem="4954" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="7" id="5043"/>
                                         <constraint firstItem="4886" firstAttribute="trailing" secondItem="4954" secondAttribute="trailing" constant="8" id="5044"/>
-                                        <constraint firstItem="4961" firstAttribute="top" secondItem="4939" secondAttribute="bottom" constant="8" id="5047"/>
-                                        <constraint firstItem="4961" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5048"/>
-                                        <constraint firstItem="4886" firstAttribute="trailing" secondItem="4961" secondAttribute="trailing" constant="364" id="5049"/>
+                                        <constraint firstItem="5095" firstAttribute="leading" secondItem="4886" secondAttribute="leading" constant="12" id="5096"/>
+                                        <constraint firstItem="5095" firstAttribute="top" secondItem="4930" secondAttribute="bottom" constant="8" id="5097"/>
+                                        <constraint firstItem="4944" firstAttribute="leading" secondItem="5095" secondAttribute="trailing" constant="8" id="5102"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -849,6 +847,10 @@
                                     <outlet property="instaPic" destination="4930" id="name-outlet-4930"/>
                                     <outlet property="labelInstaUser1" destination="4961" id="name-outlet-4961"/>
                                     <outlet property="instaLabelStatis" destination="4965" id="name-outlet-4965"/>
+                                    <outlet property="btnComment" destination="4944" id="name-outlet-4944"/>
+                                    <outlet property="btnReply" destination="4949" id="name-outlet-4949"/>
+                                    <outlet property="btn" destination="4954" id="name-outlet-4954"/>
+                                    <outlet property="btnLike" destination="5095" id="name-outlet-5095"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -857,7 +859,7 @@
                             <outlet property="delegate" destination="4881" id="4884"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" id="4927" image="instahome.png"/>
+                    <tabBarItem key="tabBarItem" id="4927" image="instahome.png" title="Hom"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="InstaTableView" destination="4882" id="name-outlet-4882"/>
@@ -902,5 +904,12 @@
         <image name="Redo.png" width="32" height="32"/>
         <image name="Search.png" width="32" height="32"/>
         <image name="Topic.png" width="32" height="32"/>
+        <image name="instaimage2.jpg" width="300" height="168"/>
+        <image name="instaimage3.jpg" width="720" height="380"/>
+        <image name="instaimage4.png" width="270" height="187"/>
+        <image name="puppy1.jpg" width="252" height="200"/>
+        <image name="instaimage2.png" width="300" height="168"/>
+        <image name="instaimage3.png" width="720" height="380"/>
+        <image name="puppy1.png" width="252" height="200"/>
     </resources>
 </document>

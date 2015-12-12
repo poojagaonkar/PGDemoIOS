@@ -36,6 +36,10 @@ namespace GoalDemo
 			get;
 			set;
 		}
+		public string PostImage {
+			get;
+			set;
+		}
 	}
 }
 
