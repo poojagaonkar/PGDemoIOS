@@ -11,18 +11,18 @@ using UIKit;
 
 namespace GoalDemo
 {
-	[Register ("TwitterMeController")]
-	partial class TwitterMeController
+	[Register ("InstaCamController")]
+	partial class InstaCamController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIImageView twitProfileImage { get; set; }
+		UIImageView instaCamPic { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (twitProfileImage != null) {
-				twitProfileImage.Dispose ();
-				twitProfileImage = null;
+			if (instaCamPic != null) {
+				instaCamPic.Dispose ();
+				instaCamPic = null;
 			}
 		}
 	}

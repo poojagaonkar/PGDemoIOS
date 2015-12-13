@@ -16,6 +16,22 @@ namespace GoalDemo
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIImageView btn { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIImageView btnComment { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnLike { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIImageView btnReply { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel instaLabelStatis { get; set; }
 
 		[Outlet]
@@ -36,6 +52,22 @@ namespace GoalDemo
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btn != null) {
+				btn.Dispose ();
+				btn = null;
+			}
+			if (btnComment != null) {
+				btnComment.Dispose ();
+				btnComment = null;
+			}
+			if (btnLike != null) {
+				btnLike.Dispose ();
+				btnLike = null;
+			}
+			if (btnReply != null) {
+				btnReply.Dispose ();
+				btnReply = null;
+			}
 			if (instaLabelStatis != null) {
 				instaLabelStatis.Dispose ();
 				instaLabelStatis = null;

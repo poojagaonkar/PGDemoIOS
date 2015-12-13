@@ -191,6 +191,14 @@
     <Compile Include="InstaTabControllerCell.designer.cs">
       <DependentUpon>InstaTabControllerCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstaCamController.cs" />
+    <Compile Include="InstaCamController.designer.cs">
+      <DependentUpon>InstaCamController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterMe.cs" />
+    <Compile Include="TwitterMe.designer.cs">
+      <DependentUpon>TwitterMe.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
